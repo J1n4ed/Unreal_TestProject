@@ -55,6 +55,18 @@ protected:
   UFUNCTION(BlueprintCallable)
   void ShowActorInformation();
 
+  UFUNCTION(BlueprintCallable)
+  FVector SinMovement();
+
+  UPROPERTY(EditInstanceOnly)
+  float Amplitude = 4.0f;
+
+  UPROPERTY(EditInstanceOnly)
+  float Frequency = 40.0f;
+
+  UPROPERTY(EditDefaultsOnly)
+  FVector InitialLocation;
+
 public:
   // Called every frame
   virtual void Tick(float DeltaTime) override;
